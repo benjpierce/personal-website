@@ -7,6 +7,7 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-typescript`,
+    `gatsby-plugin-postcss`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -33,7 +34,21 @@ module.exports = {
       options: {
         repositoryName: 'ben-pierce-website',
         accessToken: process.env.GATSBY_PRISMIC_API_TOKEN,
-        linkResolver: ({ node, key, value }) => doc => {},
+        linkResolver: ({ node, key, value }) => doc => { },
+      }
+    },
+    {
+      resolve: `gatsby-plugin-alias-imports`,
+      options: {
+        alias: {
+          "@src": "src",
+          "@components": "src/components",
+          "@pages": "src/pages",
+          "@styles": "src/styles",
+        },
+        extensions: [
+          "js",
+        ],
       }
     }
   ],
