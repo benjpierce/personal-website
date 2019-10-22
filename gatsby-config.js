@@ -50,6 +50,17 @@ module.exports = {
           "js",
         ],
       }
+    },
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Montserrat`,
+            variants: [`500`, `700`]
+          }
+        ],
+      },
     }
   ],
 }

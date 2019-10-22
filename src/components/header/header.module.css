@@ -1,0 +1,21 @@
+@import '../../styles/_variables.css';
+
+.header {
+  padding: 7.5rem 0 9rem;
+  display: flex;
+  align-items: space-between;
+
+  @media $small {
+    padding: 2rem 0 5rem;
+  }
+}
+
+.header__title {
+  font-size: 3.6rem;
+  font-weight: bold;
+  color: $cod;
+  text-transform: uppercase;
+  flex: 1;
+}
+
+

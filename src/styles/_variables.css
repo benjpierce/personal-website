@@ -1,1 +1,10 @@
+/* Solid colours */
 $alabaster: #fcfcfc;
+$scorpion: #575757;
+$cod: #111111;
+$dusty: #999999;
+
+/* Breakpoints */
+$small: screen and (max-width: 767px);
+
+$from-medium: screen and (min-width: 768px);
