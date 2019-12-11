@@ -8,20 +8,24 @@ import LayoutUI from "./layoutUI"
 import Context from "../context/context"
 import { DetermineBreakpoint } from "../../utils/layout";
 
-
-
 const Layout: FunctionComponent = ({ children }) => {
     const data = useStaticQuery(graphql`
-    query HeaderQuery {
-        prismicSiteData {
-            data {
-              title
+    query MyQuery {
+        prismic {
+          allSite_datas {
+            edges {
+              node {
+                title
+              }
             }
           }
-        }`
+        }
+      }`
     )
 
-    const layoutData: layout = get(data, "prismicSiteData.data")
+    console.log(data);
+
+    const layoutData: layout = get(data, "prismic.allSite_datas.edges[0].node")
 
     if (layoutData === undefined) {
         return null;
@@ -36,8 +40,10 @@ const Layout: FunctionComponent = ({ children }) => {
         const handleResize = () => {
             setBreakpoint(DetermineBreakpoint())
         }
-        window.addEventListener("resize", handleResize)
-        return () => { window.removeEventListener("resize", handleResize) }
+        if (window) {
+            window.addEventListener("resize", handleResize)
+            return () => { window.removeEventListener("resize", handleResize) }
+        }
     }, [])
 
     return (

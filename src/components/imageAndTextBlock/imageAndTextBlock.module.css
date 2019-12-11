@@ -1,0 +1,26 @@
+@import '../../styles/_variables.css';
+
+.imageAndTextBlock {
+  display: flex;
+  width: 100%;
+
+  @media $small {
+    display: block;
+  }
+}
+
+.imageAndTextBlockImage {
+  flex: 6;
+
+  img {
+    max-width: 100%;
+  }
+}
+
+.imageAndTextBlockText {
+  flex: 5;
+}
+
+.flexCol {
+  flex: 1;
+}

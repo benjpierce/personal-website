@@ -24,13 +24,37 @@ main {
   padding: 0 75px;
   margin: 0;
   background: $alabaster;
-    transition: background-color 300ms linear;
-
+  transition: background-color 300ms linear;
   color: $scorpion;
   height: 100vh;
 
   @media $small {
     padding: 0 20px;
+  }
+
+  h1 {
+    font-size: $fs-big;
+    margin: 0 0 calc($fs-x-large * 1.2) 0;
+
+    @media $small {
+      font-size: $fs-large;
+    }
+  }
+
+  h2 {
+    font-size: $fs-large;
+    margin: 0 0 calc($fs-large * 1.2) 0;
+  }
+
+  h3 {
+    font-size: $fs-medium;
+    margin: 0 0 calc($fs-medium * 1.2) 0;
+  }
+
+  p {
+    font-size: $fs-body;
+    line-height: calc($fs-body * 1.8);
+    margin: 0 0 calc($fs-body * 1.75) 0;
   }
 }
 

@@ -8,3 +8,16 @@ $dusty: #999999;
 $small: screen and (max-width: 767px);
 
 $from-medium: screen and (min-width: 768px);
+
+
+$fs-medium-small: 1.4rem;
+$fs-medium: 2rem;
+$fs-large: 2.6rem;
+$fs-x-large: 3.8rem;
+$fs-big: 5rem;
+$fs-body-small: 1.3rem;
+$fs-body: 1.5rem;
+
+$f-body: $fs-body/calc($fs-body * 1.5);
+$f-body-small: $fs-body-small/calc($fs-body-small * 1.5);
+

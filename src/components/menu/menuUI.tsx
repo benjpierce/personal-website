@@ -1,6 +1,8 @@
 import menuStyles from "./menu.module.css"
 import { header, link } from "../../types/layout"
 import { Link } from "gatsby"
+// @ts-ignore
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 import React, { Fragment } from "react"
 import Context from "../context/context"
 
@@ -26,7 +28,7 @@ export const MenuUI = ({ menuItemList }: IProps) => (
 
 const MenuItem = ({ text, uri }: link) => (
     <li className={menuStyles.menu__item}>
-        <Link activeStyle={{ color: "#111111" }} className={menuStyles.menu__link} to={uri}>{text}</Link>
+        <AniLink bg="linear-gradient(to bottom, #43c6ac, #f8ffae)" cover direction="right" activeStyle={{ color: "#111111" }} className={menuStyles.menu__link} to={uri}>{text}</AniLink>
     </li>
 )
 

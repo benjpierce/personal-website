@@ -6,7 +6,7 @@ import Typography from "../typography/typography"
 
 const
     menuItemList = [
-        { text: "About", uri: "" },
+        { text: "About Me", uri: "" },
         { text: "Work", uri: "/work" }
     ]
 
